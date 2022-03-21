@@ -1,8 +1,11 @@
+.gitignore
 LICENSE
 README.md
+example.py
+publish.py
 setup.py
-signal/__init__.py
-signal/signal.py
+signal_cli_socket/__init__.py
+signal_cli_socket/signal_cli_socket.py
 signal_cli_socket.egg-info/PKG-INFO
 signal_cli_socket.egg-info/SOURCES.txt
 signal_cli_socket.egg-info/dependency_links.txt

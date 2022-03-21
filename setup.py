@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='signal-cli-socket',
-    version='0.1',
-    packages=["signal"],
+    version='0.4',
+    packages=["signal_cli_socket"],
     author="Nickwasused",
     author_email="nickwasused.social@protonmail.com",
     description="A package to use with the signal-cli made by AsamK.",

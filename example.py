@@ -1,6 +1,6 @@
-from signal-cli-socket import signal
+from signal-cli-socket import signal_cli_socket
 
-sig = Signal("+491635558756")
+sig = signal_cli_socket.Signal("+491635558756")
 
 # send message to a user
 sig.send_message(["+491625555457"], "Hello there!")
