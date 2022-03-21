@@ -11,39 +11,59 @@ class Signal:
         self.account = account
 
     def send_message(self, recipient, message, group=False):
-        if ()
-        message_string = dumps({
-            "jsonrpc":"2.0",
-            "method":"send",
-            "params":
-                {
-                    "account": self.account,
-                    if (group):
+        if (group):
+            message_string = dumps({
+                "jsonrpc":"2.0",
+                "method":"send",
+                "params":
+                    {
+                        "account": self.account,
                         "groupId": recipient,
-                    else:
+                        "message": message
+                    },
+                "id": self.id
+            })
+        else:
+            message_string = dumps({
+                "jsonrpc":"2.0",
+                "method":"send",
+                "params":
+                    {
+                        "account": self.account,
                         "recipient": recipient,
-                    "message": message
-                },
-            "id": self.id
-        })
+                        "message": message
+                    },
+                "id": self.id
+            })
 
         self.signal.send(message_string.encode('utf-8'))
 
     def send_message_attatchment(self, recipient, message, attachment, group=False):
-        message_string = dumps({
-            "jsonrpc":"2.0",
-            "method":"send",
-            "params":
-                {
-                    "account": self.account,
-                    if (group):
+        if (group):
+            message_string = dumps({
+                "jsonrpc":"2.0",
+                "method":"send",
+                "params":
+                    {
+                        "account": self.account,
                         "groupId": recipient,
-                    else:
+                        "message": message,
+                        "attachments": [getcwd() + "/" + attachment]
+                    },
+                "id": self.id
+            })
+        else:
+            message_string = dumps({
+                "jsonrpc":"2.0",
+                "method":"send",
+                "params":
+                    {
+                        "account": self.account,
                         "recipient": recipient,
-                    "message": message,
-                    "attachments": [getcwd() + "/" + attachment]
-                },
-            "id": self.id
-        })
+                        "message": message,
+                        "attachments": [getcwd() + "/" + attachment]
+                    },
+                "id": self.id
+            })
 
         self.signal.send(message_string.encode('utf-8'))
