@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: signal-cli-socket
+Version: 0.1
+Summary: A package to use with the signal-cli made by AsamK.
+Home-page: https://github.com/Nickwasused/signal-cli-socket
+Author: Nickwasused
+Author-email: nickwasused.social@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # signal-cli-socket
 Use with https://github.com/AsamK/signal-cli
 
@@ -27,3 +42,5 @@ sig.send_message_attatchment("KBHvLSJlKKb8FQSA6Ajo5pB8/mgPjaTEbr68Mb5MwkA=", "En
 | ------- | ------------------
 | send_message() | Send a Message to a User or a group
 | send_message_attatchment() | Send a Message to a User or a group with an attachment
+
+
