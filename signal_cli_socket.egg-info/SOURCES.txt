@@ -10,3 +10,4 @@ signal_cli_socket.egg-info/PKG-INFO
 signal_cli_socket.egg-info/SOURCES.txt
 signal_cli_socket.egg-info/dependency_links.txt
 signal_cli_socket.egg-info/top_level.txt
+signal_cli_socket/__pycache__/__init__.cpython-39.pyc

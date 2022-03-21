@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: signal-cli-socket
-Version: 0.4
+Version: 0.5
 Summary: A package to use with the signal-cli made by AsamK.
 Home-page: https://github.com/Nickwasused/signal-cli-socket
 Author: Nickwasused
@@ -35,7 +35,7 @@ sig.send_message_attatchment("KBHvLSJlKKb8FQSA6Ajo5pB8/mgPjaTEbr68Mb5MwkA=", "En
 | Parameter | Type | required | default value
 | ------- | ------------------ | ---- | ---
 | account | string | yes | 
-| socket | string | no | /tmp/signal-cli/socket
+| socket_path | string | no | /tmp/signal-cli/socket
 | id | int | no | random value
 
 | Option  | Description       

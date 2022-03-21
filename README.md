@@ -20,7 +20,7 @@ sig.send_message_attatchment("KBHvLSJlKKb8FQSA6Ajo5pB8/mgPjaTEbr68Mb5MwkA=", "En
 | Parameter | Type | required | default value
 | ------- | ------------------ | ---- | ---
 | account | string | yes | 
-| socket | string | no | /tmp/signal-cli/socket
+| socket_path | string | no | /tmp/signal-cli/socket
 | id | int | no | random value
 
 | Option  | Description       

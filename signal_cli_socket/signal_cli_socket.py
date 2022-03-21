@@ -4,9 +4,9 @@ from os import getcwd
 import socket
 
 class Signal:
-    def __init__(self, account, socket = "/tmp/signal-cli/socket", r_id = randint(0, 5000)):
+    def __init__(self, account, socket_path = "/tmp/signal-cli/socket", r_id = randint(0, 5000)):
         self.signal = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-        self.signal.connect(socket)
+        self.signal.connect(socket_path)
         self.id = r_id
         self.account = account
 
