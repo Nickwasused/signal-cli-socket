@@ -3,18 +3,19 @@ from json import dumps
 from os import getcwd
 import socket
 
+
 class Signal:
-    def __init__(self, account, socket_path = "/tmp/signal-cli/socket", r_id = randint(0, 5000)):
+    def __init__(self, account, socket_path="/tmp/signal-cli/socket", r_id=randint(0, 5000)):
         self.signal = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.signal.connect(socket_path)
         self.id = r_id
         self.account = account
 
     def send_message(self, recipient, message, group=False):
-        if (group):
+        if group:
             message_string = dumps({
-                "jsonrpc":"2.0",
-                "method":"send",
+                "jsonrpc": "2.0",
+                "method": "send",
                 "params":
                     {
                         "account": self.account,
@@ -25,8 +26,8 @@ class Signal:
             })
         else:
             message_string = dumps({
-                "jsonrpc":"2.0",
-                "method":"send",
+                "jsonrpc": "2.0",
+                "method": "send",
                 "params":
                     {
                         "account": self.account,
@@ -38,11 +39,11 @@ class Signal:
 
         self.signal.send(message_string.encode('utf-8'))
 
-    def send_message_attatchment(self, recipient, message, attachment, group=False):
-        if (group):
+    def send_message_attachment(self, recipient, message, attachment, group=False):
+        if group:
             message_string = dumps({
-                "jsonrpc":"2.0",
-                "method":"send",
+                "jsonrpc": "2.0",
+                "method": "send",
                 "params":
                     {
                         "account": self.account,
@@ -54,8 +55,8 @@ class Signal:
             })
         else:
             message_string = dumps({
-                "jsonrpc":"2.0",
-                "method":"send",
+                "jsonrpc": "2.0",
+                "method": "send",
                 "params":
                     {
                         "account": self.account,

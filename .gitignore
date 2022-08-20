@@ -2,3 +2,4 @@
 build/
 signal/__pycache__/
 dist/
+.idea
