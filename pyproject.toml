@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "signal-cli-socket"
-version = "0.6"
+version = "0.7"
 description = "A package to use with the signal-cli made by AsamK."
 authors = ["Nickwasused <contact.nickwasused.fa6c8@simplelogin.co>"]
 license = "MPL-2.0"
