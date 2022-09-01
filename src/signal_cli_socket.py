@@ -1,6 +1,5 @@
 from random import randint
 from json import dumps
-from os import getcwd
 import socket
 
 
@@ -49,7 +48,7 @@ class Signal:
                         "account": self.account,
                         "groupId": recipient,
                         "message": message,
-                        "attachments": [getcwd() + "/" + attachment]
+                        "attachments": [attachment]
                     },
                 "id": self.id
             })
@@ -62,7 +61,7 @@ class Signal:
                         "account": self.account,
                         "recipient": recipient,
                         "message": message,
-                        "attachments": [getcwd() + "/" + attachment]
+                        "attachments": [attachment]
                     },
                 "id": self.id
             })
